@@ -1,7 +1,7 @@
 //exercise : 1
 
 
-db=db.getSiblingDB("examDB)
+db=db.getSiblingDB("examDB")
 db.students.insertOne({
   name: "Amit",
   department: "Computer Science",
@@ -85,6 +85,7 @@ db.subjects.insert({
   course_name: "MCA",
   subject_list: ["AI", "ML", "Cloud Computing"]
 })
+
 
 
 
