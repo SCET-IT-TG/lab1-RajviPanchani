@@ -1,103 +1,91 @@
-//exercise : 1
 
+// select database
+db=db.getSiblingDB("examDB");
 
-db=db.getSiblingDB("examDB")
+// Exercise 1
 db.students.insertOne({
-  name: "Amit",
+  name: "Rahul Sharma",
   department: "Computer Science",
   semester: 5,
-  mobile: "9924351261"
+  mobile: 9876543210
 })
-
 db.students.insertOne({
-  name: "Neha",
+  name: "Anita Verma",
   department: "Information Technology",
   semester: 3,
-  mobile: "9824563175"
+  mobile: 9123456780
 })
 
-
-//exercise : 2
-
+// Exercise 2: Insert Document with Multiple Fields
 
 db.students.insertOne({
-  name: "Ravi",
-  department: "Electronics",
+  name: "Mohit Kumar",
+  department: "Mechanical",
   semester: 6,
-  mobile: "9876543210"
+  mobile: 9988776655
 })
 
-
-//exercise : 3
-
+//Exercise 3: Array of Simple Values
 
 db.subjects.insertOne({
-  course_name: "BSc Computer Science",
-  subject_list: ["DBMS", "Operating System", "Computer Networks", "Java"]
+  course_name: "B.Tech Computer Science",
+  subject_list: ["Data Structures", "DBMS", "Operating System", "Networking"]
 })
 
-
-//exercise : 4
-
+//Exercise 4: Array of Objects
 
 db.faculty.insertOne({
   department: "Computer Science",
   teachers: [
-    { name: "Dr. Sharma", experience: 12 },
-    { name: "Ms. Patel", experience: 7 }
+    { name: "Dr. Singh", experience: 10 },
+    { name: "Ms. Gupta", experience: 6 }
   ]
 })
 
-
-//exercise : 5
-
+//Exercise 5: Explicit Primary Key
 
 db.students.insertOne({
   _id: ObjectId(),
-  name: "Kiran",
-  department: "Mechanical",
+  name: "Suresh Patel",
+  department: "Civil",
   semester: 4,
-  mobile: "9924786423"
+  mobile: 9001122334
 })
 
-
-//exercise : 6
-
+//Exercise 6: Duplicate Primary Key Observation
 
 db.students.insertOne({
   _id: 101,
-  name: "Suresh",
-  department: "Civil"
-  mobile: "7785463219"
-  semester: 3,
+  name: "Ravi Mehta",
+  department: "Electrical",
+  semester: 2,
+  mobile: 9554433221
+})
+
+db.students.insertOne({
+  _id: 101,
+  name: "Amit Jain",
+  department: "Electronics",
+  semester: 1,
+  mobile: 9112233445
 })
 
 
-//exercise : 7
-
-
-db.subjects.insert({
-  course_name: "MBA",
-  subject_list: ["Finance", "Marketing"]
-})
+//Exercise 7: Multiple Inserts Using insert()
 
 db.subjects.insert({
   course_name: "BCA",
-  subject_list: ["C", "C++", "Python"]
+  subject_list: ["C Programming", "Maths"]
 })
 
 db.subjects.insert({
   course_name: "MCA",
-  subject_list: ["AI", "ML", "Cloud Computing"]
+  subject_list: ["Java", "Web Development"]
 })
 
+db.subjects.insert({
+  course_name: "MBA",
+  subject_list: ["Marketing", "Finance", "HR"]
 
-
-
-
-
-
-
-
-
+})
 
